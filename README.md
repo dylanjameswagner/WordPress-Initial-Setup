@@ -1,12 +1,12 @@
 # WordPress Command Line Setup
 
-## Basic Install - example.com
+## Root Install - example.com
 ```
-mkdir ~/Sites/example.com
-cd ~/Sites/example.com
+cd ~/Sites
 wget http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
 rm -rf latest.tar.gz
+mv wordpress/ example.com
 ```
 
 ## Subdirectory Install - example.com
