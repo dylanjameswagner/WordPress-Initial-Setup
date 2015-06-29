@@ -42,11 +42,10 @@ rm -rf latest.tar.gz
 ```
 
 #### Rename Directory or Subdirectory
-Move ```wordpress``` to ```example.com```
+Move ```wordpress``` to ```example.com``` or ```wp```
 ```shell
 mv wordpress/ example.com
 ```
-Move ```wordpress``` to ```wp``` 
 ```shell
 mv wordpress/ wp
 ```
