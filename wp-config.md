@@ -129,7 +129,7 @@ define('DB_COLLATE', '');
 ### Database Upgrade from utf8 to utf8mb4
 Prevent WordPress from updating tables when an environment runs less than MySQL 5.5.3
 
-Insert after database configuration
+###### Insert after database configuration
 ```php
 /** Database Upgrade from utf8 to utf8mb4 */
 define('DO_NOT_UPGRADE_GLOBAL_TABLES', true);
@@ -165,7 +165,7 @@ endswitch;
 ```
 
 ### PHP 301 Redirects
-Insert before environments
+###### Insert before environments
 ```php
 /** PHP 301 Redirects
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
