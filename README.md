@@ -52,7 +52,7 @@ cp wp/index.php index.php
 ```
 
 #### Link to the Subdirectory
-Search and replace, adding subdirectory
+Search and replace, add subdirectory, remove backup file
 ```
 sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
