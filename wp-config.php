@@ -23,19 +23,19 @@ endif;
 
 /** Environments **/
 $environments = array(
-    'LIVE' => array(
-        'example.com',
-        'www.example.com',
-        'www.example.com.php53-14.ord1-1.websitetestlink.com',
-    ),
-    'DEV' => array(
-        'dev.example.com',
-        'dev.example.com.php53-10.ord1-1.websitetestlink.com',
-    ),
-    'LOCAL' => array(
-        'example.com.local:8888',
-        'example.com.local.10.3.1.196.xip.io:8888',
-    ),
+	'LIVE' => array(
+		'example.com',
+		'www.example.com',
+		'www.example.com.php53-14.ord1-1.websitetestlink.com',
+	),
+	'DEV' => array(
+		'dev.example.com',
+		'dev.example.com.php53-10.ord1-1.websitetestlink.com',
+	),
+	'LOCAL' => array(
+		'example.com.local:8888',
+		'example.com.local.10.3.1.196.xip.io:8888',
+	),
 );
 
 /** Define Environment **/
