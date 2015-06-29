@@ -30,7 +30,7 @@ mkdir ~/Sites/example.com
 cd ~/Sites/example.com
 ```
 
-### Intall WordPress
+### Install WordPress
 ```
 wget http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
