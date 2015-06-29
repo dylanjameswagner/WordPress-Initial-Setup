@@ -25,12 +25,14 @@ rm index.phpe
 ## Breaking it down
 
 ### Project Directory
+Make project directory, change directory into project directory 
 ```
 mkdir ~/Sites/example.com
 cd ~/Sites/example.com
 ```
 
 ### Install WordPress
+Download the latest release of WordPress, extract achive, and remove archive
 ```
 wget http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
