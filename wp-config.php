@@ -14,7 +14,7 @@
  * @package WordPress
  */
 
-/** PHP 301 redirects
+/** PHP 301 Redirects
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
 if (file_exists(dirname(__FILE__) . '/../redirects.php')):
