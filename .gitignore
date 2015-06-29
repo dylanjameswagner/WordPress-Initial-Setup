@@ -1,0 +1,110 @@
+# example.com
+
+###
+### everything
+###
+
+/*
+
+###
+### root
+###
+
+!.git*
+!.htaccess
+!README.md
+!index.php
+!redirects.php
+
+###
+### favicons
+###
+
+!favicon*
+!apple-touch-icon*
+!android-chrome*
+!browserconfig.xml
+!manifest.json
+!mstile*
+
+###
+### wp
+###
+
+!wp/
+wp/*
+!wp/wp-config.php
+
+###
+### wp-content
+###
+
+!wp/wp-content/
+wp/wp-content/*
+
+###
+### plugins
+###
+
+!wp/wp-content/plugins/
+wp/wp-content/plugins/*
+
+###
+### themes
+###
+
+!wp/wp-content/themes/
+wp/wp-content/themes/*
+!wp/wp-content/themes/example/
+wp/wp-content/themes/example/public
+
+###
+### processors
+###
+
+.sass-cache
+bower_components
+node_modules
+
+###
+### logs
+###
+
+*.log
+debug_log
+error_log
+
+###
+### design
+###
+
+.sketch
+.psd
+.ai
+
+###
+### packages
+###
+
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+###
+### OS generated
+###
+
+._*
+.orig
+.DS_Store*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
