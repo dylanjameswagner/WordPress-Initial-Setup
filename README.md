@@ -74,6 +74,7 @@ phpMyAdmin _or_ Sequel Pro
 
 ## Configuration
 Copy and Paste Files
-- index.php - install at project root for subdirectory installations
-- redirects.php - install at project root - included in index.php
+- .gitignore
+- index.php - subdirectory installations
+- redirects.php - included in index.php
 - wp-config.php - see wp-config.md for more information
