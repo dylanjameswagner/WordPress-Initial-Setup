@@ -1,4 +1,4 @@
-# WordPress Command Line Setup
+# WordPress Initial Setup
 
 ## Standard Install (example.com)
 ```shell
