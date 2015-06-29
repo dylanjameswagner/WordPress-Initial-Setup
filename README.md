@@ -83,7 +83,7 @@ cp wp-config-sample.php wp-config.php
 cp wp/wp-config-sample.php wp/wp-config.php
 ```
 
-### WordPress Configuration
+### Multi-environment MySQL Settings
 Replace single environment settings with multi-environment switch settings
 
 __Original__
@@ -107,7 +107,7 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 ```
-__Replacement__
+__Replace__
 ```php
 /** Environments **/
 $environments = array(
@@ -141,8 +141,8 @@ endforeach;
 /** Override WordPress address and installation directory **/
 switch (ENVIRONMENT) :
 case 'LIVE' :
-	define('WP_HOME'	,'http://www.horsleyrealestate.com');
-	define('WP_SITEURL'	,'http://www.horsleyrealestate.com/wp');
+	define('WP_HOME'	,'http://www.example.com');
+	define('WP_SITEURL'	,'http://www.example.com/wp');
 	define('WP_DEBUG'	, false);
 	break;
 
@@ -219,7 +219,7 @@ https://api.wordpress.org/secret-key/1.1/salt/
 $table_prefix  = 'wp_';
 ```
 
-### Debug
+### PHP Debugging
 __Original__
 ```php
 define('WP_DEBUG', false);
