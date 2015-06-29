@@ -56,11 +56,13 @@ foreach ($environments AS $environment => $option) :
 	  && in_array($_SERVER['HTTP_HOST'],$option))
 	  || strstr($_SERVER['HTTP_HOST'],$option)) :
 		define('ENVIRONMENT',$environment);
-		return;
-	else :
-		define('ENVIRONMENT','LIVE')
+		break;
 	endif;
 endforeach;
+
+if (!defined('ENVIRONMENT')) :
+	define('ENVIRONMENT','LIVE');
+endif;
 
 /** Override WordPress address and installation directory **/
 switch (ENVIRONMENT) :
