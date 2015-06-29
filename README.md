@@ -21,9 +21,9 @@ sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
 ```
 
-### Breaking it down
+## Breaking it down
 
-#### Project Directory
+### Project Directory
 Make project directory, change directory into project directory 
 ```shell
 mkdir ~/Sites/example.com; cd $_
@@ -33,7 +33,7 @@ mkdir ~/Sites/example.com
 cd ~/Sites/example.com
 ```
 
-#### Install WordPress
+### Install WordPress
 Download the latest release of WordPress, extract achive, and remove archive
 ```shell
 wget http://wordpress.org/latest.tar.gz
@@ -41,7 +41,7 @@ tar -xzvf latest.tar.gz
 rm -rf latest.tar.gz
 ```
 
-#### Rename Directory or Subdirectory
+### Rename Directory or Subdirectory
 Move ```wordpress``` to ```example.com``` or ```wp```
 ```shell
 mv wordpress/ example.com
@@ -50,13 +50,13 @@ mv wordpress/ example.com
 mv wordpress/ wp
 ```
 
-#### Dulicate index.php
+### Dulicate index.php
 Copy the ```index.php``` file to the project root
 ```shell
 cp wp/index.php index.php
 ```
 
-#### Link to the Subdirectory
+### Link to the Subdirectory
 Search and replace in the ```index.php``` to add the subdirectory, remove backup file
 ```shell
 sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
