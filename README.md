@@ -1,6 +1,6 @@
 # WordPress Command Line Setup
 
-## Standard Install - example.com
+## Standard Install (example.com)
 ```
 cd ~/Sites
 wget http://wordpress.org/latest.tar.gz
@@ -9,7 +9,7 @@ rm -rf latest.tar.gz
 mv wordpress/ example.com
 ```
 
-## Subdirectory Install - example.com
+## Subdirectory Install (example.com)
 ```
 mkdir ~/Sites/example.com
 cd ~/Sites/example.com
