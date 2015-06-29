@@ -73,4 +73,7 @@ vhosts _or_ MAMP Pro
 phpMyAdmin _or_ Sequel Pro
 
 ## Configuration
-See wp-config.md 
+Copy and Paste Files
+- index.php - install at project root for subdirectory installations
+- redirects.php - install at project root - included in index.php
+- wp-config.php - see wp-config.md for more information
