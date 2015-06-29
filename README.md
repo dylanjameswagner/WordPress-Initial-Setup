@@ -78,3 +78,19 @@ Copy and Paste Files
 - index.php - subdirectory installations
 - redirects.php - included in index.php
 - wp-config.php - see wp-config.md for more information
+
+## Themes
+Remove unnecessary themes, however consider leaving an alternate theme for testing
+## Remove Unneeded Themes
+```shell
+cd wp-content/themes
+```
+```shell
+cd wp/wp-content/themes
+```
+```shell
+rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
+```
+```shell
+rm -rf twentyfifteen
+```
