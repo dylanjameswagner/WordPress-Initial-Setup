@@ -1,6 +1,6 @@
 # WordPress Command Line Setup
 
-## Root Install - example.com
+## Standard Install - example.com
 ```
 cd ~/Sites
 wget http://wordpress.org/latest.tar.gz
