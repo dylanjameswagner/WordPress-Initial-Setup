@@ -11,8 +11,7 @@ mv wordpress/ example.com
 
 ## Subdirectory Install (example.com)
 ```shell
-mkdir ~/Sites/example.com
-cd ~/Sites/example.com
+mkdir ~/Sites/example.com; cd $_
 wget http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
 rm -rf latest.tar.gz
@@ -27,6 +26,9 @@ rm index.phpe
 #### Project Directory
 Make project directory, change directory into project directory 
 ```shell
+mkdir ~/Sites/example.com; cd $_
+```
+```shell
 mkdir ~/Sites/example.com
 cd ~/Sites/example.com
 ```
@@ -39,8 +41,12 @@ tar -xzvf latest.tar.gz
 rm -rf latest.tar.gz
 ```
 
-#### Rename Subdirectory
-Move the contents of the ```wordpress``` to ```wp``` 
+#### Rename Directory or Subdirectory
+Move ```wordpress``` to ```example.com```
+```shell
+mv wordpress/ example.com
+```
+Move ```wordpress``` to ```wp``` 
 ```shell
 mv wordpress/ wp
 ```
