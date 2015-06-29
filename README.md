@@ -65,6 +65,12 @@ sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
 ```
 
+### Create wp-config.php
+Copy the ```index.php``` file to the project root
+```shell
+cp wp/wp-config-sample.php wp-config.php
+```
+
 ## Hosts
 Setup a hosts entry for example.com.local
 
@@ -73,5 +79,3 @@ vhosts _or_ MAMP Pro
 ## Database
 
 phpMyAdmin _or_ Sequel Pro
-
-## Edit wp-config.php
