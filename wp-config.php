@@ -51,11 +51,8 @@ case 'LIVE' :
 	break;
 
 default :
-	// define('WP_HOME'	,'http://'.$_SERVER['HTTP_HOST']);
-	// define('WP_SITEURL'	,'http://'.$_SERVER['HTTP_HOST'].'/wp');
-
-	define('WP_HOME'	,'http://'.$_SERVER['SERVER_NAME']);
-	define('WP_SITEURL'	,'http://'.$_SERVER['SERVER_NAME'] );
+	define('WP_HOME'	,'http://'.$_SERVER['HTTP_HOST']);
+	define('WP_SITEURL'	,'http://'.$_SERVER['HTTP_HOST'].'/wp');
 	break;
 
 endswitch;
