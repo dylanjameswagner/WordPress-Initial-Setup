@@ -21,7 +21,9 @@ sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
 ```
 
-## Breaking it down
+===
+
+## Breaking It Down
 
 ### Project Directory
 Make project directory, change directory into project directory 
