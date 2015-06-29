@@ -66,9 +66,9 @@ rm index.phpe
 ```
 
 ### Create wp-config.php
-Copy the ```index.php``` file to the project root
+Copy the ```wp-config-sample.php``` file to ```wp-config.php```
 ```shell
-cp wp/wp-config-sample.php wp-config.php
+cp wp/wp-config-sample.php wp/wp-config.php
 ```
 
 ## Hosts
