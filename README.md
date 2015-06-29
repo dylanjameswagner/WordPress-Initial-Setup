@@ -75,6 +75,8 @@ vhosts _or_ MAMP Pro
 phpMyAdmin _or_ Sequel Pro
 
 ## Configuration (example.com)
+https://github.com/dylanjameswagner/WordPress-Command-Line-Setup/blob/master/wp-config.php
+
 Copy the ```wp-config-sample.php``` file to ```wp-config.php```
 ```shell
 cp wp-config-sample.php wp-config.php
