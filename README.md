@@ -84,7 +84,7 @@ cp wp/wp-config-sample.php wp/wp-config.php
 ### Multi-environment MySQL Settings
 Replace single environment settings with multi-environment switch settings
 
-__Original__
+###### Original
 ```php
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -105,7 +105,7 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 ```
-__Replace__
+###### Replace
 ```php
 /** Environments **/
 $environments = array(
@@ -218,11 +218,11 @@ $table_prefix  = 'wp_';
 ```
 
 ### PHP Debugging
-__Original__
+###### Original
 ```php
 define('WP_DEBUG', false);
 ```
-__Replace__
+###### Replace
 ```php
 switch (ENVIRONMENT) :
 case 'LIVE' :
