@@ -52,7 +52,6 @@ if (!defined('ENVIRONMENT')) :
 	define('ENVIRONMENT','LIVE');
 endif;
 
-
 /** Override WordPress address and installation directory **/
 switch (ENVIRONMENT) :
 case 'LIVE' :
