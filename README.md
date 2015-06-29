@@ -59,6 +59,7 @@ rm index.phpe
 ```
 
 ## Hosts
+Setup a hosts entry for example.com.local
 
 vhosts _or_ MAMP Pro
 
