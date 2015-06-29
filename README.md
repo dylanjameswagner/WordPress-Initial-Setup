@@ -84,7 +84,7 @@ cp wp/wp-config-sample.php wp/wp-config.php
 ### Multi-environment MySQL Settings
 Replace single environment settings with multi-environment switch settings
 
-###### Original
+###### Search
 ```php
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -218,7 +218,7 @@ $table_prefix  = 'wp_';
 ```
 
 ### PHP Debugging
-###### Original
+###### Search
 ```php
 define('WP_DEBUG', false);
 ```
