@@ -139,6 +139,7 @@ define('DO_NOT_UPGRADE_GLOBAL_TABLES', true);
 https://api.wordpress.org/secret-key/1.1/salt/
 
 ## Database Table Prefix
+Change to a unique table prefix
 ```php
 $table_prefix  = 'wp_';
 ```
