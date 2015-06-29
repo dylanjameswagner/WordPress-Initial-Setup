@@ -83,7 +83,7 @@ cp wp-config-sample.php wp-config.php
 cp wp/wp-config-sample.php wp/wp-config.php
 ```
 
-### Database Configuration
+### WordPress Configuration
 Replace single environment settings with multi-environment switch settings
 
 __Original__
@@ -224,12 +224,17 @@ __Original__
 ```php
 define('WP_DEBUG', false);
 ```
-Replace
+__Replace__
 ```php
-define('WP_DEBUG', false);
-if (WP_DEBUG) :
-    define( 'WP_DEBUG_LOG', true );
-    define( 'WP_DEBUG_DISPLAY', false );
-    @ini_set( 'display_errors', 0 );
-endif;
+switch (ENVIRONMENT) :
+case 'LIVE' :
+	define('WP_DEBUG',false);
+ 	define('WP_DEBUG_LOG',true);
+	break;
+
+default :
+	define('WP_DEBUG',true);
+	break;
+
+endswitch;
 ```
