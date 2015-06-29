@@ -6,7 +6,7 @@ cd ~/Sites
 wget http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
 rm -rf latest.tar.gz
-mv wordpress/ example.com
+mv wordpress/ example.com; cd $_
 ```
 
 ## Subdirectory Install (example.com)
@@ -65,12 +65,6 @@ sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
 ```
 
-### Create wp-config.php
-Copy the ```wp-config-sample.php``` file to ```wp-config.php```
-```shell
-cp wp/wp-config-sample.php wp/wp-config.php
-```
-
 ## Hosts
 Setup a hosts entry for example.com.local
 
@@ -79,3 +73,12 @@ vhosts _or_ MAMP Pro
 ## Database
 
 phpMyAdmin _or_ Sequel Pro
+
+## Configuration (example.com)
+Copy the ```wp-config-sample.php``` file to ```wp-config.php```
+```shell
+cp wp-config-sample.php wp-config.php
+```
+```shell
+cp wp/wp-config-sample.php wp/wp-config.php
+```
