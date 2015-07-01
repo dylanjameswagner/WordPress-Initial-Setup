@@ -33,7 +33,11 @@ define('DB_COLLATE', '');
 ```
 ###### Replace
 ```php
-/** Environments **/
+/**
+ * Multi-environment settings
+ *
+ * Define environment name and possible matching HTTP_HOSTs
+ */
 $environments = array(
 	'LIVE' => array(
 		'example.com',
@@ -50,7 +54,7 @@ $environments = array(
 	),
 );
 
-/** Define Environment **/
+/** Define Current Environment **/
 foreach ($environments AS $environment => $option) :
 	if ((is_array($option)
 	  && in_array($_SERVER['HTTP_HOST'],$option))
@@ -143,7 +147,7 @@ https://api.wordpress.org/secret-key/1.1/salt/
 ## Database Table Prefix
 Change to a unique table prefix
 ```php
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 ```
 
 ### PHP Debugging
@@ -169,7 +173,9 @@ endswitch;
 ### PHP 301 Redirects
 ###### Insert before environments
 ```php
-/** PHP 301 Redirects
+/**
+ * PHP 301 Redirects
+ *
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
 if (file_exists(dirname(__FILE__) . '/../redirects.php')):
