@@ -14,14 +14,20 @@
  * @package WordPress
  */
 
-/** PHP 301 Redirects
+/**
+ * PHP 301 Redirects
+ *
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
 if (file_exists(dirname(__FILE__) . '/../redirects.php')):
 	require_once(dirname(__FILE__) . '/../redirects.php');
 endif;
 
-/** Environments **/
+/**
+ * Multi-environment settings
+ *
+ * Define environment name and possible matching HTTP_HOSTs
+ */
 $environments = array(
 	'LIVE' => array(
 		'example.com',
@@ -38,7 +44,7 @@ $environments = array(
 	),
 );
 
-/** Define Environment **/
+/** Define Current Environment **/
 foreach ($environments AS $environment => $option) :
 	if ((is_array($option)
 	  && in_array($_SERVER['HTTP_HOST'],$option))
@@ -141,7 +147,7 @@ define('NONCE_SALT'			,'put your unique phrase here');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'nCQct3_';
+$table_prefix = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
