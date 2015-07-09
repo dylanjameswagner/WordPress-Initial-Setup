@@ -2,5 +2,6 @@
 
 ```shell
 cd ~/Sites
-ssh://codeserver.dev.[...]/~/repository.git example.com
+git clone ssh://codeserver.dev.[...]/~/repository.git example.com; $_
+mkdir wp; mv * $_
 ```
