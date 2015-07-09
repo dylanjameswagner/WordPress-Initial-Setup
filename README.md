@@ -89,6 +89,9 @@ cd wp-content/themes
 cd wp/wp-content/themes
 ```
 ```shell
+rm -rvf twenty*
+```
+```shell
 rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
 ```
 ```shell
