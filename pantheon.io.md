@@ -12,6 +12,16 @@ git remote rename origin pantheon
 git remote add origin https://github.com/teamcolab/example.com
 ```
 
+### Themes
+```shell
+cd wp/wp-content/themes
+rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
+```
+
+```shell
+rm -rf twentyfifteen
+```
+
 ### WordPress Subdirectory
 ```shell
 mkdir wp; mv * $_
@@ -52,14 +62,4 @@ node_modules
 ```shell
 git add -A
 git commit -m "move wordpress into subdirectory"
-```
-
-### Themes
-```shell
-cd wp/wp-content/themes
-rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
-```
-
-```shell
-rm -rf twentyfifteen
 ```
