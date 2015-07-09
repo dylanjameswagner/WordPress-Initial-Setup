@@ -9,7 +9,7 @@ git clone ssh://codeserver.dev.[...]/~/repository.git example.com; $_
 ### Remotes
 ```shell
 git remote rename origin pantheon
-git remote add origin https://github.com/teamcolab/example.com
+git remote add origin https://github.com/username/repository
 ```
 
 ### Themes
