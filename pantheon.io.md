@@ -20,7 +20,7 @@ sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
 rm index.phpe
 ```
 
-## Git Ignore
+###### Git Ignore
 ```
 # WordPress #
 ############
@@ -48,6 +48,7 @@ bower_components
 node_modules
 ```
 
+###### Commit
 ```shell
 git add -A
 git commit -m "move wordpress into subdirectory"
