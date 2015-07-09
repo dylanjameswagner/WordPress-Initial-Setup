@@ -81,7 +81,7 @@ Copy and Paste Files
 
 ## Themes
 Remove legacy themes, however consider leaving an alternate theme for testing
-## Remove Legacy Themes
+### Remove Legacy Themes
 ```shell
 cd wp-content/themes
 ```
