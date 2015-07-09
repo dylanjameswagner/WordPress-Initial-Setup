@@ -80,8 +80,8 @@ Copy and Paste Files
 - wp-config.php - see wp-config.md for more information
 
 ## Themes
-Remove unnecessary themes, however consider leaving an alternate theme for testing
-## Remove Unneeded Themes
+Remove legacy themes, however consider leaving an alternate theme for testing
+## Remove Legacy Themes
 ```shell
 cd wp-content/themes
 ```
@@ -92,8 +92,8 @@ cd wp/wp-content/themes
 rm -rvf twenty*
 ```
 ```shell
-rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
+rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen twentyfifteen
 ```
 ```shell
-rm -rf twentyfifteen
+find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
