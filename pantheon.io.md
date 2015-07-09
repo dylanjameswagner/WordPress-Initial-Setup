@@ -14,12 +14,8 @@ git remote add origin https://github.com/username/repository
 
 ### Themes
 ```shell
-cd wp/wp-content/themes
-rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen
-```
-
-```shell
-rm -rf twentyfifteen
+cd wp-content/themes
+find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
 ### WordPress Subdirectory
@@ -31,35 +27,10 @@ rm index.phpe
 ```
 
 ###### Git Ignore
-```
-# WordPress #
-############
-wp/wp-config-local.php
-wp/wp-content/uploads
-wp/wp-content/blogs.dir/
-wp/wp-content/upgrade/
-wp/wp-content/backup-db/
-wp/wp-content/advanced-cache.php
-wp/wp-content/wp-cache-config.php
-sitemap.xml
-sitemap.xml.gz
-*.log
-
-# @TODO writable paths
-wp/wp-content/cache/
-wp/wp-content/backups/
-
-[...]
-
+```shell
 # Processors #
 ##########
 .sass-cache
 bower_components
 node_modules
-```
-
-###### Commit
-```shell
-git add -A
-git commit -m "move wordpress into subdirectory"
 ```
