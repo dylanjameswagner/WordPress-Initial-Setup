@@ -18,14 +18,14 @@ cd wp-content/themes
 find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
-###### Git Ignore
-__Search__
+### Git Ignore
+###### __Search__
 ```shell
 # Sass #
 ##########
 .sass-cache
 ```
-__Replace__
+###### __Replace__
 ```shell
 # Processors #
 ##########
