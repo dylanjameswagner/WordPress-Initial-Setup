@@ -18,14 +18,6 @@ cd wp-content/themes
 find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
-### WordPress Subdirectory
-```shell
-mkdir wp; mv * $_
-cp wp/index.php index.php
-sed -ie "s/'\/wp-blog-header.php/'\/wp\/wp-blog-header.php/g" index.php
-rm index.phpe
-```
-
 ###### Git Ignore
 ```shell
 # Processors #
