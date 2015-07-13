@@ -3,7 +3,7 @@
 ### Clone
 ```shell
 cd ~/Sites
-git clone ssh://codeserver.dev.[...]/~/repository.git example.com; $_
+git clone ssh://codeserver.dev.[...]/~/repository.git example.com; cd $_
 ```
 
 ### Remotes
