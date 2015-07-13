@@ -19,6 +19,13 @@ find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
 ###### Git Ignore
+__Search__
+```shell
+# Sass #
+##########
+.sass-cache
+```
+__Replace__
 ```shell
 # Processors #
 ##########
