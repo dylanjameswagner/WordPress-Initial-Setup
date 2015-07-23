@@ -142,7 +142,7 @@ define('DO_NOT_UPGRADE_GLOBAL_TABLES', true);
 ```
 
 ### Update Authentication Unique Keys and Salts
-https://api.wordpress.org/secret-key/1.1/salt/
+<a target="_blank" href="https://api.wordpress.org/secret-key/1.1/salt/">https://api.wordpress.org/secret-key/1.1/salt/</a>
 
 ## Database Table Prefix
 Change to a unique table prefix
