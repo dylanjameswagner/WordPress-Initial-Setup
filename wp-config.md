@@ -146,6 +146,7 @@ https://api.wordpress.org/secret-key/1.1/salt/
 
 ## Database Table Prefix
 Change to a unique table prefix
+###### Search
 ```php
 $table_prefix = 'wp_';
 ```
