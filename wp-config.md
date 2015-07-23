@@ -171,14 +171,14 @@ endswitch;
 ```
 
 ### PHP 301 Redirects
-###### Insert before environments
+###### Insert before WP_USE_THEMES in root index.php
 ```php
 /**
  * PHP 301 Redirects
  *
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
-if (file_exists(dirname(__FILE__) . '/../redirects.php')):
-	require_once(dirname(__FILE__) . '/../redirects.php');
+if (file_exists(dirname(__FILE__) . '/redirects.php')):
+	require_once(dirname(__FILE__) . '/redirects.php');
 endif;
 ```
