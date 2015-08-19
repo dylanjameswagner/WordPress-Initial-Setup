@@ -1,5 +1,11 @@
 ## Pantheon Install (example.com)
 
+### SSH Key
+Acount SSH Keys
+```shell
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
 ### Clone
 ```shell
 cd ~/Sites
