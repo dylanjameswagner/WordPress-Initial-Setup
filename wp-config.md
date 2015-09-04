@@ -51,8 +51,7 @@ $environments = array(
     ),
     'LOCAL' => array(
         'example.com.local:8888',
-        'example.com.local.10.3.1.196.xip.io:8888',
-        'localhost:3000',
+        'example.com.local.10.3.1.69.xip.io:8888',
     ),
 );
 
@@ -90,24 +89,24 @@ endswitch;
 /** MySQL settings - You can get this info from your web host **/
 switch (ENVIRONMENT) :
 case 'LIVE' :
-    define('DB_HOST'        ,'');
-    define('DB_NAME'        ,'');
-    define('DB_USER'        ,'');
-    define('DB_PASSWORD'    ,'');
+    define('DB_HOST'     ,'');
+    define('DB_NAME'     ,'');
+    define('DB_USER'     ,'');
+    define('DB_PASSWORD' ,'');
     break;
 
 case 'DEV' :
-    define('DB_HOST'        ,'');
-    define('DB_NAME'        ,'');
-    define('DB_USER'        ,'');
-    define('DB_PASSWORD'    ,'');
+    define('DB_HOST'     ,'');
+    define('DB_NAME'     ,'');
+    define('DB_USER'     ,'');
+    define('DB_PASSWORD' ,'');
     break;
 
 case 'LOCAL' :
-    define('DB_HOST'        ,'localhost');
-    define('DB_NAME'        ,'example.com');
-    define('DB_USER'        ,'root');
-    define('DB_PASSWORD'    ,'root');
+    define('DB_HOST'     ,'localhost');
+    define('DB_NAME'     ,'example.com');
+    define('DB_USER'     ,'root');
+    define('DB_PASSWORD' ,'root');
     break;
 
 default :
