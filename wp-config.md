@@ -162,12 +162,12 @@ define('WP_DEBUG', false);
 ```php
 switch (ENVIRONMENT) :
 case 'LIVE' :
-    define('WP_DEBUG',false);
-    define('WP_DEBUG_LOG',true);
+    define('WP_DEBUG', false);
+    define('WP_DEBUG_LOG', true);
     break;
 
 default :
-    define('WP_DEBUG',true);
+    define('WP_DEBUG', true);
     break;
 
 endswitch;
