@@ -1,27 +1,22 @@
 <?php
 /**
- * The base configurations of the WordPress.
+ * The base configuration for WordPress
  *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, and ABSPATH. You can find more information by visiting
- * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
- * Codex page. You can get the MySQL settings from your web host.
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
  *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
-
-/**
- * PHP 301 Redirects
- *
- * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
- */
-if (file_exists(dirname(__FILE__) . '/../redirects.php')):
-	require_once(dirname(__FILE__) . '/../redirects.php');
-endif;
 
 /**
  * Multi-environment settings
@@ -29,87 +24,87 @@ endif;
  * Define environment name and possible matching HTTP_HOSTs
  */
 $environments = array(
-	'LIVE' => array(
-		'example.com',
-		'www.example.com',
-		'www.example.com.php53-14.ord1-1.websitetestlink.com',
-	),
-	'DEV' => array(
-		'dev.example.com',
-		'dev.example.com.php53-10.ord1-1.websitetestlink.com',
-	),
-	'LOCAL' => array(
-		'example.com.local:8888',
-		'example.com.local.10.3.1.196.xip.io:8888',
-	),
+    'LIVE' => array(
+        'example.com',
+        'www.example.com',
+        'www.example.com.php53-14.ord1-1.websitetestlink.com',
+    ),
+    'DEV' => array(
+        'dev.example.com',
+        'dev.example.com.php53-10.ord1-1.websitetestlink.com',
+    ),
+    'LOCAL' => array(
+        'example.com.local:3000',
+        'example.com.local:8888',
+        'example.com.local.10.3.1.196.xip.io:8888',
+    ),
 );
 
-/** Define Current Environment **/
+/** Define Environment **/
 foreach ($environments AS $environment => $option) :
-	if ((is_array($option)
-	  && in_array($_SERVER['HTTP_HOST'],$option))
-	  || strstr($_SERVER['HTTP_HOST'],$option)) :
-		define('ENVIRONMENT',$environment);
-		break;
-	endif;
+    if ((is_array($option)
+      && in_array($_SERVER['HTTP_HOST'], $option))
+      || strstr($_SERVER['HTTP_HOST'], $option)) :
+        define('ENVIRONMENT', $environment);
+        break;
+    endif;
 endforeach;
 
 if (!defined('ENVIRONMENT')) :
-	define('ENVIRONMENT','LIVE');
+    define('ENVIRONMENT', 'LIVE');
 endif;
 
 /** Override WordPress address and installation directory **/
 switch (ENVIRONMENT) :
 case 'LIVE' :
-	define('WP_HOME'	,'http://www.example.com');
-	define('WP_SITEURL'	,'http://www.example.com/wp');
-	break;
+    define('WP_HOME',    'http://www.example.com');
+    define('WP_SITEURL', 'http://www.example.com/wp');
+    break;
 
 default :
-	define('WP_HOME'	,'http://'.$_SERVER['HTTP_HOST']);
-	define('WP_SITEURL'	,'http://'.$_SERVER['HTTP_HOST'].'/wp');
-	break;
+    define('WP_HOME',    'http://'.$_SERVER['HTTP_HOST']);
+    define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/wp');
+    break;
 
 endswitch;
 
 /** MySQL settings - You can get this info from your web host **/
 switch (ENVIRONMENT) :
 case 'LIVE' :
-	define('DB_HOST'		,'');
-	define('DB_NAME'		,'');
-	define('DB_USER'		,'');
-	define('DB_PASSWORD'	,'');
-	break;
+    define('DB_HOST',     '');
+    define('DB_NAME',     '');
+    define('DB_USER',     '');
+    define('DB_PASSWORD', '');
+    break;
 
 case 'DEV' :
-	define('DB_HOST'		,'');
-	define('DB_NAME'		,'');
-	define('DB_USER'		,'');
-	define('DB_PASSWORD'	,'');
-	break;
+    define('DB_HOST',     '');
+    define('DB_NAME',     '');
+    define('DB_USER',     '');
+    define('DB_PASSWORD', '');
+    break;
 
 case 'LOCAL' :
-	define('DB_HOST'		,'localhost');
-	define('DB_NAME'		,'example.com');
-	define('DB_USER'		,'root');
-	define('DB_PASSWORD'	,'root');
-	break;
+    define('DB_HOST',     'localhost');
+    define('DB_NAME',     'example.com');
+    define('DB_USER',     'root');
+    define('DB_PASSWORD', 'root');
+    break;
 
 default :
 
-	/** MySQL hostname */
-	define('DB_HOST', 'localhost');
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
 
-	/** The name of the database for WordPress */
-	define('DB_NAME', 'database_name_here');
+    /** The name of the database for WordPress */
+    define('DB_NAME', 'database_name_here');
 
-	/** MySQL database username */
-	define('DB_USER', 'username_here');
+    /** MySQL database username */
+    define('DB_USER', 'username_here');
 
-	/** MySQL database password */
-	define('DB_PASSWORD', 'password_here');
-
-	break;
+    /** MySQL database password */
+    define('DB_PASSWORD', 'password_here');
+    break;
 
 endswitch;
 
@@ -131,21 +126,21 @@ define('DO_NOT_UPGRADE_GLOBAL_TABLES', true);
  *
  * @since 2.6.0
  */
-define('AUTH_KEY'			,'put your unique phrase here');
-define('SECURE_AUTH_KEY'	,'put your unique phrase here');
-define('LOGGED_IN_KEY'		,'put your unique phrase here');
-define('NONCE_KEY'			,'put your unique phrase here');
-define('AUTH_SALT'			,'put your unique phrase here');
-define('SECURE_AUTH_SALT'	,'put your unique phrase here');
-define('LOGGED_IN_SALT'		,'put your unique phrase here');
-define('NONCE_SALT'			,'put your unique phrase here');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 /**#@-*/
 
 /**
  * WordPress Database Table prefix.
  *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix = 'wp_';
 
@@ -155,16 +150,21 @@ $table_prefix = 'wp_';
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 switch (ENVIRONMENT) :
 case 'LIVE' :
-	define('WP_DEBUG',false);
- 	define('WP_DEBUG_LOG',true);
-	break;
+    define('WP_DEBUG',     false);
+    define('WP_DEBUG_LOG', true);
+    break;
 
 default :
-	define('WP_DEBUG',true);
-	break;
+    define('WP_DEBUG', true);
+    break;
 
 endswitch;
 
@@ -172,7 +172,7 @@ endswitch;
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
