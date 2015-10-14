@@ -99,7 +99,7 @@ find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
 ### PHP 301 Redirects
-###### Insert before WP_USE_THEMES in root index.php
+__Insert before ```WP_USE_THEMES``` in root ```index.php```__
 ```php
 /**
  * 301 Redirects
