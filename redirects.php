@@ -12,7 +12,7 @@ $redirects = array(
 );
 
 if ( array_key_exists( $request, $redirects ) ) :
-    header('HTTP/1.0 301 Moved Permanently');
-    header('Location: ' . $redirects[ $request ]);
+    header( 'HTTP/1.0 301 Moved Permanently' );
+    header( 'Location: ' . $redirects[ $request ] );
     exit();
 endif;
