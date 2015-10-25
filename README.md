@@ -102,7 +102,7 @@ find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 __Insert before ```WP_USE_THEMES``` in root ```index.php```__
 ```php
 /**
- * 301 Redirects
+ * Redirects
  *
  * @link https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
