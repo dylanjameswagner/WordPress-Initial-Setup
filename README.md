@@ -98,15 +98,40 @@ rm -rf twentyten twentyeleven twentytwelve twentythirteen twentyfourteen twentyf
 find . -type d ! -name 'twentyfifteen' -d 1 -print -exec rm -r {} +;
 ```
 
-### PHP 301 Redirects
-__Insert before ```WP_USE_THEMES``` in root ```index.php```__
+#### Redirects
+Add support for redirects to the ```index.php``` in the root directory. Insert before ```WP_USE_THEMES```.
+
 ```php
 /**
- * Redirects
+ * PHP 301 Redirects
+ *
+ * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
+ */
+if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) ):
+    require_once( dirname( __FILE__ ) . '/redirects.php' );
+endif;
+```
+
+Create a ```redirects.php``` in the root directory.
+
+```php
+<?php
+/**
+ * 301 Redirects
+ *
+ * An associative array of old and new urls. Trailing slashes are trimmed from
+ * the request URI so array keys should not have a trailing slash for match compatibility.
  *
  * @link https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
-if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) ) :
-    require_once( dirname( __FILE__ ) . '/redirects.php' );
+$request = rtrim( $_SERVER['REQUEST_URI'], '/\\' ); // trim trailing slash
+$redirects = array(
+    '/old' => '/new/',
+);
+
+if ( array_key_exists( $request, $redirects ) ) :
+    header( 'HTTP/1.0 301 Moved Permanently' );
+    header( 'Location: ' . $redirects[ $request ] );
+    exit();
 endif;
 ```
