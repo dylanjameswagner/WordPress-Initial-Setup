@@ -2,13 +2,14 @@
 /**
  * 301 Redirects
  *
- * @link https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
+ * An associative array of old and new urls. Trailing slashes are trimmed from
+ * the request URI so array keys should not have a trailing slash for match compatibility.
  *
- * Use array keys with no trailing slash for compatibility with or without.
+ * @link https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
-$request = rtrim( $_SERVER['REQUEST_URI'], '/\\' ); // remove trailing slash
+$request = rtrim( $_SERVER['REQUEST_URI'], '/\\' ); // trim trailing slash
 $redirects = array(
-    '/old-page' => '/new-page/',
+    '/old' => '/new/',
 );
 
 if ( array_key_exists( $request, $redirects ) ) :
