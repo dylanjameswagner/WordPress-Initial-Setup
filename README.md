@@ -27,7 +27,7 @@ rm index.phpe
 
 ## Standard Install (example.com)
 ### Sites Directory
-Change directory into ```Sites``
+Change directory into ```Sites```
 ```shell
 cd ~/Sites
 ```
