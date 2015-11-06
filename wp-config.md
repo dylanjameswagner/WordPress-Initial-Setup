@@ -1,6 +1,6 @@
 
 ## Configuration (example.com)
-Copy the ```wp-config-sample.php``` file to ```wp-config.php```
+Copy the file ```wp-config-sample.php``` to ```wp-config.php```
 ```shell
 cp wp-config-sample.php wp-config.php
 ```
