@@ -50,7 +50,7 @@ mv wordpress/ example.com
 
 ## Subdirectory Install (example.com)
 ### Sites Directory
-Change directory into ```Sites``
+Change directory into ```Sites```
 ```shell
 cd ~/Sites
 ```
