@@ -100,7 +100,7 @@ Add support for redirects to the ```index.php``` in the root directory. Insert b
 
 ```php
 /**
- * PHP 301 Redirects
+ * 301 Redirects
  *
  * https://pantheon.io/docs/articles/sites/code/redirect-incoming-requests/
  */
